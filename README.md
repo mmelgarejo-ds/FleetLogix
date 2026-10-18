@@ -30,6 +30,8 @@ FleetLogix necesita centralizar y analizar la operación de su flota —vehícul
 - **Calidad de datos en el ETL:** de 33.900 registros extraídos, 18.905 pasaron los filtros de calidad (se descartaron 14.995 por inconsistencias temporales que habrían distorsionado el análisis)
 - **Troubleshooting de performance:** la carga de clientes por `MERGE` fila por fila generaba timeout con 17.000 registros; se resolvió migrando a carga en batch, bajando el tiempo de minutos a segundos
 
+**Informe ejecutivo** (hallazgos y recomendaciones de negocio, pensado para lectores no técnicos): [`INFORME_EJECUTIVO.md`](INFORME_EJECUTIVO.md).
+
 ## Arquitectura cloud (diseño)
 
 ```
@@ -53,6 +55,16 @@ Diagrama completo en `Avance_4/aws_architecture_diagram.png`.
 ## Stack
 
 PostgreSQL · Python (psycopg2, Faker) · SQL · Snowflake (snowflake-connector-python) · pandas · NumPy · AWS — diseño (API Gateway, Lambda, DynamoDB, S3, RDS) · boto3 · draw.io
+
+## Cómo reproducirlo
+
+```bash
+git clone https://github.com/mmelgarejo-ds/FleetLogix.git
+cd FleetLogix
+pip install -r requirements.txt
+```
+
+`Avance_1/01_data_generation.py` genera los datos sintéticos (requiere PostgreSQL local). Los `.sql` de `Avance_2/` y `Avance_3/` se ejecutan contra esa base. `Avance_4/aws_setup.py` y `lambda_functions.py` son diseño de infraestructura — requieren credenciales AWS propias para ejecutarse y no están pensados para correr sin una cuenta configurada.
 
 ## Autor
 
