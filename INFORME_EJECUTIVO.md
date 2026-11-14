@@ -23,7 +23,7 @@ El análisis de 505.569 registros de operación (2 años, 200 vehículos, 400 co
 1. **Resolver de inmediato la licencia vencida del conductor identificado** — es el único hallazgo que representa una exposición legal directa para la empresa.
 2. **Investigar la causa raíz del 54% de retrasos** antes de invertir en más flota o personal: si el problema es estructural (ej. rutas mal diseñadas, ventanas de entrega poco realistas, sobrecarga de ciertos vehículos), agregar recursos sin corregir la causa no mejora la puntualidad.
 3. **Auditar la ruta Bogotá-Barranquilla** específicamente: comparar vehículo, conductor y trazado contra rutas de eficiencia similar para aislar la variable responsable.
-4. **Usar la migración a la nube (ver Avance 4) como oportunidad** para instrumentar alertas en tiempo real de puntualidad y vencimientos de licencia, en lugar de detectarlos en un análisis retrospectivo como este.
+4. **Usar la migración a la nube (ver la arquitectura propuesta) como oportunidad** para instrumentar alertas en tiempo real de puntualidad y vencimientos de licencia, en lugar de detectarlos en un análisis retrospectivo como este.
 
 ---
 
@@ -31,17 +31,17 @@ El análisis de 505.569 registros de operación (2 años, 200 vehículos, 400 co
 
 - **Los datos son sintéticos**, generados con Faker para esta práctica (no son datos operativos reales de ninguna empresa). La tasa de retrasos del 54% fue insertada deliberadamente en la generación de datos para que el ejercicio tuviera un patrón de puntualidad real para analizar — en una implementación real, este número vendría de la operación y no de un diseño de dataset.
 - El pipeline ETL hacia el Data Warehouse descartó 14.995 de 33.900 registros extraídos (44%) por inconsistencias temporales (fechas de entrega anteriores a la fecha de despacho). Esa proporción de descarte es alta y, en un dataset real, sería motivo de revisión del sistema de origen, no solo del pipeline de carga.
-- La arquitectura en AWS (Avance 4) es un diseño técnico, no una infraestructura desplegada — está pensada para validar el diseño, no para operar en producción tal como está.
+- La arquitectura en AWS es un diseño técnico, no una infraestructura desplegada — está pensada para validar el diseño, no para operar en producción tal como está.
 
 ---
 
 ## 4. Evidencia
 
 <p align="center"><img src="figures/diagrama_ER.png" alt="Diagrama entidad-relación" width="90%"></p>
-<p align="center"><sub>Fuente: elaboración propia — modelo relacional de la base operativa (Avance 1).</sub></p>
+<p align="center"><sub>Fuente: elaboración propia — modelo relacional de la base operativa.</sub></p>
 
 <p align="center"><img src="figures/aws_architecture_diagram.png" alt="Arquitectura cloud en AWS" width="90%"></p>
-<p align="center"><sub>Fuente: elaboración propia — diseño de arquitectura cloud para operación en tiempo real (Avance 4).</sub></p>
+<p align="center"><sub>Fuente: elaboración propia — diseño de arquitectura cloud para operación en tiempo real.</sub></p>
 
 ---
 
