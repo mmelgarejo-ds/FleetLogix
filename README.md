@@ -1,6 +1,6 @@
 # FleetLogix — Infraestructura de Datos para Logística de Última Milla
 
-Diseño e implementación end-to-end de la infraestructura de datos de una empresa de logística ficticia (200 vehículos, operación en 5 ciudades de Colombia), desde el modelo relacional hasta una arquitectura cloud. Módulo 2 — Soy Henry Data Science AI.
+Diseño e implementación end-to-end de la infraestructura de datos de una empresa de logística ficticia (200 vehículos, operación en 5 ciudades de Colombia), desde el modelo relacional hasta una arquitectura cloud.
 
 <p align="center"><img src="Avance_4/aws_architecture_diagram.png" alt="Arquitectura cloud en AWS" width="85%"></p>
 <p align="center"><sub>Arquitectura cloud de referencia (diseño, no desplegada) — detalle en la sección "Arquitectura cloud" más abajo.</sub></p>
@@ -105,3 +105,5 @@ pip install -r requirements.txt
 ## Autor
 
 Mauricio Melgarejo · [LinkedIn](https://www.linkedin.com/in/mmelgarejo-ds/) · [GitHub](https://github.com/mmelgarejo-ds)
+
+<sub>Proyecto desarrollado durante la carrera de Data Science de Henry (2026).</sub>
