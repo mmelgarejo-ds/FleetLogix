@@ -104,4 +104,4 @@ pip install -r requirements.txt
 
 ## Autor
 
-Mauricio Melgarejo · [LinkedIn](https://linkedin.com/in/mauricio-daniel-melgarejo-amaro-482596105) · [GitHub](https://github.com/mmelgarejo-ds)
+Mauricio Melgarejo · [LinkedIn](https://www.linkedin.com/in/mmelgarejo-ds/) · [GitHub](https://github.com/mmelgarejo-ds)
